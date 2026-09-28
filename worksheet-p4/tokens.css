@@ -2,10 +2,10 @@
 :root {
    --brown-50: #FFECE5;
     --brown-100: #D3D4C0;
-    --brown-500: #9D6638;
-    --brown-700: #a4795a;
+    --pink-50: #FFEBEB;
+    --brown-700: #8A5F41;
     --brown-800: #554844;
-    --brown-900: #452829;
+    --brown-900: #62504A;
     --brown-950: #622B14;
 
     --space-1: 0.25rem;
@@ -25,18 +25,17 @@
  
 /* LAPIS 2 — semantik: peran. Isinya mengacu ke lapis 1. */
 :root {
-  /* LAPIS 2 - semantik: peran. Isinya mengacu ke lapis 1. */
-:root {
+  
     --color-bg: var(--brown-800);
     --color-fg: var(--brown-50);
-    --color-surface: #452829;
+    --color-surface: #62504A;
     --color-border: #D3D4C0;
-    --color-primary: var(--brown-500);
+    --color-primary: var(--pink-500);
     --color-danger: #622B14;
     --color-focus: var(--brown-700);
 
     --card-pad: var(--space-4);
     --section-gap: var(--space-6);
 }
-}
+
 
