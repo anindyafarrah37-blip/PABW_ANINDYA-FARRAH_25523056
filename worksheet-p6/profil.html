@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+  KERANGKA AWAL — Halaman Profil Saya
+  PABW 2026/2027 · Pertemuan 3
+-->
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="komponen.css">
+  <link rel="stylesheet" href="tema.css">
+
+  <title>Daftar Minuman Favorit</title>
+</head>
+
+<body>
+  <!-- Pembungkus paling luar untuk Grid 3 Baris (Lembar B.1) -->
+  <div class="page">
+
+    <header>
+      <div class="header-baris">
+        <h1>Daftar Minuman Favorit</h1>
+
+        <nav aria-label="Navigasi utama">
+          <ul>
+            <li><a href="#Daftar-Minuman">Daftar Minuman</a></li>
+            <li><a href="#Gambar-Minuman">Gambar Minuman</a></li>
+            <li><a href="#Tambah-Minuman-Favorite">Tambah Minuman Favorite</a></li>
+          </ul>
+        </nav>
+
+        <!-- Pengalih tema gelap -->
+        <input type="checkbox" id="tema" class="pengalih-tema">
+        <label for="tema" class="tombol-tema">Tema gelap</label>
+      </div>
+    </header>
+
+    <main class="isi">
+      <!-- SIDEBAR KIRI -->
+      <aside class="sisi">
+        <h2>Menu</h2>
+        <nav>
+          <ul>
+            <li><a href="#Daftar-Minuman">Daftar Minuman</a></li>
+            <li><a href="#Gambar-Minuman">Gambar Minuman</a></li>
+            <li><a href="#Tambah-Minuman-Favorite">Tambah Minuman Favorit</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Pembungkus isi utama (Lembar B.2) -->
+      <div class="utama">
+
+        <!-- BAGIAN DAFTAR MINUMAN -->
+        <section id="Daftar-Minuman">
+          <h2>Daftar Minuman</h2>
+
+          <table>
+            <caption>Daftar Minuman Favorit</caption>
+            <thead>
+              <tr>
+                <th scope="col">Nama Minuman</th>
+                <th scope="col">Asal Minuman</th>
+                <th scope="col">Bahan Utama</th>
+                <th scope="col">Rasa Dominan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Matcha Latte</th>
+                <td>Jepang</td>
+                <td>Bubuk teh hijau, susu</td>
+                <td>Pahit</td>
+              </tr>
+              <tr>
+                <th scope="row">Thai Tea</th>
+                <td>Thailand</td>
+                <td>Bubuk teh hitam, susu</td>
+                <td>Manis</td>
+              </tr>
+              <tr>
+                <th scope="row">Taro Milk Tea</th>
+                <td>Taiwan</td>
+                <td>Bubuk taro, teh hitam, susu</td>
+                <td>Manis</td>
+              </tr>
+              <tr>
+                <th scope="row">Kombucha</th>
+                <td>Tiongkok</td>
+                <td>Teh hitam difermentasi</td>
+                <td>Asam</td>
+              </tr>
+              <tr>
+                <th scope="row">Chocolate Milkshake</th>
+                <td>Amerika Serikat</td>
+                <td>Es krim cokelat, susu</td>
+                <td>Manis</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- BAGIAN GAMBAR MINUMAN -->
+        <section id="Gambar-Minuman">
+          <h2>Gambar Minuman Favorit</h2>
+
+          <div class="galeri">
+            <figure class="kartu">
+              <img src="matchacihh.png"
+                   alt="Matcha Latte — minuman teh hijau Jepang dengan susu"
+                   width="300"
+                   height="360"
+                   loading="lazy">
+              <figcaption>Matcha mood on repeat.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- BAGIAN FORM TAMBAH MINUMAN -->
+        <section id="Tambah-Minuman-Favorit">
+          <h2> Tambah Minuman Favorit</h2>
+
+          <form action="/simpan" method="post">
+
+            <div class="form-kolom">
+              <label for="Nama-Minuman">Nama Minuman</label>
+              <input type="text" id="Nama-Minuman" name="nama_minuman" required>
+              <span class="pesan-galat">wajib diisi.</span>
+            </div>
+
+            <div class="form-kolom">
+              <label for="Asal-Minuman">Asal Minuman</label>
+              <input type="text" id="Asal-Minuman" name="asal_minuman" required>
+              <span class="pesan-galat"> wajib diisi.</span>
+            </div>
+
+            <div class="form-kolom">
+              <label for="Bahan-Utama">Bahan Utama</label>
+              <input type="text" id="Bahan-Utama" name="bahan_utama" required>
+              <span class="pesan-galat">wajib diisi.</span>
+            </div>
+
+            <div class="form-kolom">
+              <label for="Rasa-Dominan">Rasa Dominan</label>
+              <input type="text" id="Rasa-Dominan" name="rasa_dominan" required>
+              <span class="pesan-galat">wajib diisi.</span>
+            </div>
+
+            <button type="submit">Simpan</button>
+          </form>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Anindya Farrah Aishavia · 25523056 · 2026</p>
+    </footer>
+
+  </div> <!-- / .page -->
+</body>
+</html>
