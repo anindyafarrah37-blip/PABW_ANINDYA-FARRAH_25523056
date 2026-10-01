@@ -5,7 +5,7 @@
 }
  
 label {
-  font-size: var(--text-sm);
+  font-size: var(--text-base, 1rem);
   font-weight: 600;
 }
  
@@ -55,3 +55,17 @@ button {
 
 .kartu__isi { min-width: 0; }
 .kartu__judul { overflow-wrap: anywhere; }
+
+.galeri .kartu {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+form {
+  max-width: 28rem;      /* biar gak melar ke seluruh layar */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);   /* jarak antar kolom form */
+}

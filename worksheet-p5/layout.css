@@ -47,7 +47,14 @@ main {
     "sisi bawah";
 }
 .sisi  { grid-area: sisi; }
-.utama { grid-area: utama; }
+
+.utama {
+  grid-area: utama;
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  min-width: 0;
+}
 
 .katalog {
   display: flex;
