@@ -1,11 +1,11 @@
 /* dasar: berlaku di semua lebar */
-.sisi {
+.header-baris {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-4);
 }
 
-.utama {
+.isi {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-4);
