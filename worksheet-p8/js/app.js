@@ -34,12 +34,12 @@ console.log(kalimat)
 
 const daftarProyek = [
   {
-    judul: "Website Top Up Diamond",
+    judul: "Website Daftar Minuman Favorit",
     tahun: 2026,
     selesai: true,
   },
   {
-    judul: "Sistem Booking Fotografer",
+    judul: "Sistem Pesan Minum",
     tahun: 2026,
     selesai: true,
   },
