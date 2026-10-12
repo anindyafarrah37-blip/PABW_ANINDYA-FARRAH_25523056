@@ -1,4 +1,4 @@
-const profil = {
+export const profil = {
   nama: "Anindya Farrah",
   peran: "Mahasiswa Informatika",
   keahlian: [
@@ -32,21 +32,24 @@ const kalimat = `Nama saya ${profil.nama}, dan saya belajar ${profil.keahlian.le
 
 console.log(kalimat)
 
-const daftarProyek = [
+export const daftarProyek = [
   {
     judul: "Website Daftar Minuman Favorit",
     tahun: 2026,
     selesai: true,
+    kategori: "web",
   },
   {
     judul: "Sistem Pesan Minum",
     tahun: 2026,
     selesai: true,
+    kategori: "web",
   },
   {
     judul: "Sistem Informasi KosKita",
     tahun: 2026,
     selesai: false,
+    kategori: "sistem",
   },
 ];
 
