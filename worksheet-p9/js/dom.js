@@ -59,3 +59,49 @@ function render(daftar) {
 
 // Render awal: semua proyek
 render(daftarProyek);
+
+const barisFilter = document.querySelector("#filter");
+
+barisFilter.addEventListener("click", (event) => {
+  const tombol = event.target.closest("button");
+  if (!tombol) return;
+  const kategori = tombol.dataset.kategori;
+  const terpilih = daftarProyek.filter(
+    (proyek) => kategori === "semua" || proyek.kategori === kategori
+  );
+  render(terpilih);
+  tandaiTombolAktif(tombol);
+});
+
+function tandaiTombolAktif(tombolAktif) {
+  barisFilter.querySelectorAll("button").forEach((t) => {
+    t.classList.toggle("aktif", t === tombolAktif);
+  });
+}
+
+render(daftarProyek); 
+
+// ============================================
+// LEMBAR C — Filter dengan satu pendengar di induk
+// ============================================
+const barisFilter = document.querySelector("#filter");
+console.log("barisFilter:", barisFilter);
+
+barisFilter.addEventListener("click", (event) => {
+  const tombol = event.target.closest("button");
+  if (!tombol) return; // klik di luar tombol, abaikan
+
+  const kategori = tombol.dataset.kategori;
+  const terpilih = daftarProyek.filter(
+    (proyek) => kategori === "semua" || proyek.kategori === kategori
+  );
+
+  render(terpilih);           // gambar ulang daftar
+  tandaiTombolAktif(tombol);  // tandai tombol yang aktif
+});
+
+function tandaiTombolAktif(tombolAktif) {
+  barisFilter.querySelectorAll("button").forEach((tombol) => {
+    tombol.classList.toggle("aktif", tombol === tombolAktif);
+  });
+}

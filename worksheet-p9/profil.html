@@ -157,8 +157,15 @@
             <button type="submit">Simpan</button>
           </form>
         </section>
-
+        
+        <div id="filter" role="group" aria-label="Filter kategori">
+       <button type="button" data-kategori="semua" class="aktif">Semua</button>
+       <button type="button" data-kategori="web">Web</button>
+      <button type="button" data-kategori="sistem">Sistem</button>
       </div>
+      
+      <ul id="daftar"></ul>
+      <p id="kosong" hidden>Belum ada proyek untuk kategori ini.</p>
     </main>
 
     <footer class="footer">
