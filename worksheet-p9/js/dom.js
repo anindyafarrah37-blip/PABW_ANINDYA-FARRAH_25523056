@@ -105,3 +105,49 @@ function tandaiTombolAktif(tombolAktif) {
     tombol.classList.toggle("aktif", tombol === tombolAktif);
   });
 }
+
+// ============================================
+// LEMBAR D — Validasi form
+// ============================================
+const formProyek = document.querySelector("#form-proyek");
+console.log("formProyek:", formProyek);
+
+formProyek.addEventListener("submit", (event) => {
+  event.preventDefault();     // halaman TIDAK reload
+
+  const semuaKolom = Array.from(formProyek.querySelectorAll("input[required]"));
+  let adaMasalah = false;
+  let kolomPertamaBermasalah = null;
+
+  semuaKolom.forEach((input) => {
+    const pesan = input.parentElement.querySelector(".pesan-galat");
+    const sah = input.value.trim() !== "";
+
+    input.setAttribute("aria-invalid", sah ? "false" : "true");
+    if (pesan) pesan.hidden = sah;    // sembunyikan bila sah
+
+    if (!sah) {
+      adaMasalah = true;
+      if (!kolomPertamaBermasalah) kolomPertamaBermasalah = input;
+    }
+  });
+
+  if (adaMasalah) {
+    kolomPertamaBermasalah.focus();
+    return;
+  }
+
+  console.log("✅ Form valid, siap dikirim");
+  formProyek.reset();
+});
+
+// Sembunyikan pesan galat saat pengguna mengetik
+formProyek.querySelectorAll("input").forEach((input) => {
+  input.addEventListener("input", () => {
+    const pesan = input.parentElement.querySelector(".pesan-galat");
+    if (pesan && input.value.trim() !== "") {
+      pesan.hidden = true;
+      input.setAttribute("aria-invalid", "false");
+    }
+  });
+});
