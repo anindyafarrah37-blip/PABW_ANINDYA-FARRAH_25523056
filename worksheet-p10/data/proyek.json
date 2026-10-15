@@ -1,0 +1,21 @@
+[
+  {
+    "judul": "Website Daftar Minuman Favorit",
+    "tahun": 2026,
+    "selesai": true,
+    "kategori": "web"
+  },
+  {
+    "judul": "Sistem Pesan Minum",
+    "tahun": 2026,
+    "selesai": true,
+    "kategori": "web"
+  },
+  {
+    "judul": "Sistem Informasi KosKita",
+    "tahun": 2026,
+    "selesai": false,
+    "kategori": "sistem"
+  }
+]
+
