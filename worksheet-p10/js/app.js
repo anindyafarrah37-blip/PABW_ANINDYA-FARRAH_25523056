@@ -22,20 +22,20 @@ console.log(`Nama saya ${profil.nama}, dan saya belajar ${profil.keahlian.length
 
 async function muat() {
   aturMemuat(true);
+
   try {
-    const data = await ambilProyek();   
-    console.log(data);                  
-    
-    const badan = JSON.stringify({ judul: "Judul contoh", kategori: "web" });
-    console.log(typeof badan);         
- 
-    render(data);                       
-    pasangFilter(data);                 
+    const data = await ambilProyek();
+
+    render(data);
+    pasangFilter(data);
   } catch (galat) {
-    tampilkanGalat("Data gagal dimuat. Periksa koneksi, lalu muat ulang halaman.");
-    console.error(galat.message);       
+    tampilkanGalat(
+      "Data gagal dimuat. Periksa koneksi, lalu muat ulang halaman."
+    );
+    console.error(galat.message);
+  } finally {
     aturMemuat(false);
   }
 }
- 
+
 muat();

@@ -23,30 +23,36 @@ function buatKartu(proyek) {
  
 
 export function render(daftar) {
-  wadah.textContent = "";               
- 
-  if (daftar.length === 0) {            
+  wadah.textContent = "";
+
+  if (daftar.length === 0) {
     kosong.textContent = "Belum ada proyek untuk ditampilkan.";
     kosong.hidden = false;
     return;
   }
-  kosong.hidden = true;                 
-  daftar.forEach((proyek) => wadah.append(buatKartu(proyek)));
+
+  kosong.hidden = true;
+
+  daftar.forEach((proyek) => {
+    wadah.append(buatKartu(proyek));
+  });
 }
+
  
 
 export function aturMemuat(sedangMemuat) {
   memuat.hidden = !sedangMemuat;
 }
  
+
 export function tampilkanGalat(pesan) {
   wadah.textContent = "";
   kosong.hidden = true;
   galat.textContent = pesan;
   galat.hidden = false;
 }
- 
 
+ 
 export function pasangFilter(daftar) {
   barisFilter.addEventListener("click", (event) => {
     const tombol = event.target.closest("button");
